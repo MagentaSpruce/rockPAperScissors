@@ -13,10 +13,6 @@ const replay = document.querySelector('.replay');
 const userInput = document.querySelector('.guess');
 const submit = document.querySelector('.submit');
 
-
-
-
-
 //Random computer choice picker
 const computerPlay = function(){
     const pick = Math.floor(Math.random()*3)+1;
@@ -26,8 +22,7 @@ const computerPlay = function(){
         return 'scissors'
     } else if( pick === 3){
         return 'paper'
-    } else console.log('Error');
-    
+    } else console.log('Error'); 
 }
 
 let score = 2;
@@ -131,7 +126,6 @@ document.querySelector('.submit').addEventListener('click', function(){
    }
 })
 
-
 document.querySelector('.replay').addEventListener('click', function(){
     score = score;
     document.querySelector('body').style.backgroundImage = 'linear-gradient(cyan, teal)';
@@ -154,36 +148,8 @@ document.querySelector('.replay').addEventListener('click', function(){
     document.querySelector('.submit').textContent = 'Submit';
     document.querySelector('.score').textContent = 2;
     
-    answerBox.textContent = computerPlay();
-    
-
-   
+    answerBox.textContent = computerPlay();  
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//THIS IS ALL THE CODE (minus the random number generator) FOR THE PRE UI ASSIGNMENT
-
-
-
-//User choice
-//const userInput = prompt('Welcome to the Paper, Rock & Scissors game! Choose rock, paper, or scissors to play!').toLowerCase();
-//console.log(userInput);
-
 
 //single-round of play
 const singleRound = function(playerSelection, computerSelection){
@@ -201,13 +167,4 @@ const singleRound = function(playerSelection, computerSelection){
     } else{console.log('error ahh!')}
 
 }
-    
-//singleRound(userInput,computerPlay());
-
-
-//const game = function(){
-//    for (let i = 0; i <=5;i++){
-//        singleRound(userInput,computerPlay());
-//    }
-//}
-//game();
+ 
